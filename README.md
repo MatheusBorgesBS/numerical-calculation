@@ -25,7 +25,5 @@ octave script_name.m
 ## Contribution
 Feel free to contribute by submitting issues, pull requests, or suggestions.
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-```
+
 
