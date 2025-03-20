@@ -2,6 +2,7 @@
 #for i = 1:50
   #disp(i)
 #endfor
+# vetor = (1:50)
 
 #Ex 2
 #for i = 2:2:100
@@ -96,7 +97,7 @@
 #    break
 #  else
 #  endif
-#endwhile
+#endwhile200.17.252.31
 
 #Ex 11
 #count = 0;
@@ -123,7 +124,17 @@
 #    disp('Valor invalido tente novamente!')
 #    continue
 #  else
-#    break
+#    breakwhile true
+#  A = input('Digite um número (de 1 a 10):')
+#  if  (0<A && A<10)
+#    for i = 1:10
+#    fprintf('%d x %d = %d\n',A,i,A*i)
+#   endfor
+#   break
+#  else
+#    disp('Tente outro valor dentro do intervalo definido:')
+#  endif
+#endwhile
 #  endif
 #endwhile
 
@@ -184,17 +195,66 @@
 #endfor
 #fprintf('O fatorial de %d é: %d\n',A,fat)
 
-#Ex19
-n = input('tamanho do conjunto')
-vetor = zeros(1,n)
+#Ex20
+#n = input('tamanho do conjunto');
+#vetor = zeros(1,n);
+#for i = 1:n
+#  vetor(:,i) = input('Digite um número');
+#endfor
+#fprintf('O maior valor do conjunto é: %d\n',max(vetor))
+#fprintf('O menor valor do conjunto é: %d\n',min(vetor))
+#fprintf('A soma de todos os valores no conjunto é: %d\n', sum(vetor))
+
+
+#Ex 21
+#A = input('Digite um número: ');
+#count = 0;
+#for i = 1:A
+#  if mod(A,i) == 0
+#    count += 1;
+#  else
+#    continue;
+#  endif
+#endfor
+
+#if count == 2
+#  fprintf('%d é primo\n', A)
+#else
+#  fprintf('%d n é primo\n', A)
+#endif
+
+#Ex 22
+#A = input('Digite um número: ');
+#count = 0;
+#vetor = [];
+
+#for i = 1:A
+
+#  if mod(A,i) == 0
+#    count += 1;
+#    vetor(:,end+1) = i;
+#  else
+#     continue
+#  endif
+#endfor
+
+
+#if count == 2
+#  fprintf('%d é primo\n', A)
+#else
+#  fprintf('%d n é primo\n', A)
+#  disp('os divisores dele são:')
+#  disp(vetor)
+#endif
+
+#Ex 23
+n = input('Digite um número')
+vetor = []
+count = 0
+
 for i = 1:n
-	vetor(:,i) = input('Digite um número')
-endfor
-fprintf('O maior valor do conjunto é: %d\n',max(vetor))
-fprintf('O menor valor do conjunto é: %d\n',min(vetor))
-fprintf('A soma de todos os valores no conjunto é: %d\n', sum(vetor))
-
-	
-
-
-
+  for j = 1:n
+    if mod(i,j) == 0
+      count += 1
+    endif
+  endfor
