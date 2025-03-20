@@ -1,4 +1,3 @@
-```markdown
 # Numerical Calculation Exercises in Octave
 
 This repository contains a collection of exercises for the Numerical Calculation subject, implemented in GNU Octave.
