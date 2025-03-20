@@ -184,5 +184,17 @@
 #endfor
 #fprintf('O fatorial de %d é: %d\n',A,fat)
 
+#Ex19
+n = input('tamanho do conjunto')
+vetor = zeros(1,n)
+for i = 1:n
+	vetor(:,i) = input('Digite um número')
+endfor
+fprintf('O maior valor do conjunto é: %d\n',max(vetor))
+fprintf('O menor valor do conjunto é: %d\n',min(vetor))
+fprintf('A soma de todos os valores no conjunto é: %d\n', sum(vetor))
+
+	
+
 
 
