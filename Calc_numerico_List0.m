@@ -248,13 +248,33 @@
 #endif
 
 #Ex 23
-n = input('Digite um número')
-vetor = []
-count = 0
+#n = input('Digite um número')
+#vetor = []
+#count = 0
 
-for i = 1:n
-  for j = 1:n
-    if mod(i,j) == 0
-      count += 1
-    endif
-  endfor
+#for i = 1:n
+#  for j = 1:n
+#    if mod(i,j) == 0
+#      count += 1
+#    endif
+#  endfor
+
+#Ex 23
+#n = input('Digite um número: ');
+#vetor = [];
+
+#for i = 2:n
+#  count = 0;
+
+#  for j = 1:n
+#    if mod(i,j) == 0
+#      count += 1;
+#    endif
+#   endfor
+#  if count == 2
+#    vetor(:,end+1) = i;
+#  endif
+#  endfor
+#fprintf('Os valores até %d que são primos são:\n',n)
+#disp(vetor)
+
