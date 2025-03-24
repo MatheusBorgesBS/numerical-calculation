@@ -278,3 +278,30 @@
 #fprintf('Os valores até %d que são primos são:\n',n)
 #disp(vetor)
 
+#Ex 24
+
+#vetor = [];
+
+#for i = 2:1000
+#  count = 0;
+
+#  for j = 1:i
+#    if mod(i,j) == 0
+#      count += 1;
+#    endif
+#   endfor
+#  if count == 2
+#    vetor = [vetor,i];
+#  endif
+#  endfor
+
+#  gemeos = [];
+
+#  for k = 1:length(vetor) - 1
+#    if vetor(k+1) - vetor(k) == 2
+#      gemeos = [gemeos; vetor(k), vetor(k+1)];
+#    endif
+#  endfor
+
+#disp(gemeos)
+
