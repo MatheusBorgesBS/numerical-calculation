@@ -303,5 +303,34 @@
 #    endif
 #  endfor
 
+#Ex 25
+
+#vetor = [];
+
+#for i = 2:1000
+#  count = 0;
+
+#  for j = 1:i
+#    if mod(i,j) == 0
+#      count += 1;
+#    endif
+#   endfor
+#  if count == 2
+#    vetor = [vetor,i];
+#  endif
+#  endfor
+
+#  gemeos_triplos = [];
+
+#for k = 1:length(vetor)
+#   n = vetor(k);
+#   if ismember(n+2, vetor) && ismember(n+6, vetor)
+#     gemeos_triplos = [gemeos_triplos; n, n+2, n+6];
+#   endif
+#endfor
+#disp('Lista dos gemeos triplos:')
+#disp(gemeos_triplos)
+
+
 #disp(gemeos)
 
