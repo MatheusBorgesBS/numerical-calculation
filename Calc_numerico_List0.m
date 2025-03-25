@@ -334,3 +334,38 @@
 
 #disp(gemeos)
 
+#Ex 26
+#vetor = [];
+
+#for i = 2:1000
+#  count = 0;
+
+#  for j = 1:i
+#    if mod(i,j) == 0
+#      count += 1;
+#    endif
+#   endfor
+#  if count == 2
+#    vetor = [vetor,i];
+#  endif
+#  endfor
+
+# n = input('');
+
+# value = [];
+
+# for k = vetor
+#   for h = vetor
+#    disp([k,h,k+h])
+#    if (k+h) == n
+#       value = [value, k, h];
+#       break
+#     endif
+#   endfor
+#   if ~isempty(value)
+#     break
+#   endif
+# endfor
+
+# disp(value)
+
