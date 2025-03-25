@@ -402,4 +402,27 @@ for i = 2:1000
 
  disp(value)
  %}
+%{
+Ex 27
 
+
+vetor = [];
+count = 0;
+
+while count <= 1001
+  qtd_divisores = 0;
+  for i = 2:1000
+    for j = 1:i
+      if mod(i,j) == 0
+        qtd_divisores += 1;
+      endif
+     endfor
+    if qtd_divisores == 2
+      vetor = [vetor,i];
+      count += 1;
+    endif
+  endfor
+endwhile
+
+disp(vetor(end))
+%}
