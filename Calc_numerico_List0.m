@@ -426,3 +426,71 @@ endwhile
 
 disp(vetor(end))
 %}
+
+####
+%{
+n = 10
+v = randi([1,20],1,n)
+qtd = length(find(0<=v & v<=10))
+fprintf('a qtd de números entre [0,10] é: %d\n', qtd)
+fprintf('a qtd de números que não estão entre [0,10] é: %d\n',length(v)-qtd);
+%}
+
+
+%{
+  Ex 7
+A = input('Digite um número:');
+if (0<A)
+  fprintf('a raiz quadrada de %d é: %d \n',A,sqrt(A))
+else
+  displ('A raiz quadrada é imaginária')
+endif
+%}
+
+
+
+%{
+#Ex 12
+base = 5
+altura = 2
+area_T = @(b,h) 9b*h)/2
+
+area = area_T(base,altura)
+%}
+
+#Extra
+%{
+l1 = 10
+l2 = 5
+ar_pr = @(l1,l2) [2*(l1+l2), l2*l1]
+calculo = ar_pr(l1,l2)
+fprintf('O perimetro do retangulo é:%d\na area do retangulo é:%d\n',calculo(1),calculo(2))
+%}
+
+%{
+Ex 18
+n = input('Digite um número(ele será o n-ésimo termo da sequencia de fibonacci):');
+v = [1 1];
+for j = 3:n
+   v = [v,v(j-1)+v(j-2) ];
+endfor
+disp(v)
+
+Ou ainda?
+
+
+#Ex 18
+n = input('Digite um número(ele será o n-ésimo termo da sequencia de fibonacci):');
+v = [];
+v(1) = 1;
+v(2) = 1;
+for j = 3:n
+   v = [v,v(j-1)+v(j-2)];
+endfor
+disp(v)
+%}
+
+
+
+
+
