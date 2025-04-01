@@ -490,6 +490,135 @@ endfor
 disp(v)
 %}
 
+%{
+n = 10
+v = randi([1,20],1,n)
+qtd = length(find(0<=v & v<=10))
+fprintf('a qtd de números entre [0,10] é: %d\n', qtd)
+fprintf('a qtd de números que não estão entre [0,10] é: %d\n',length(v)-qtd);
+%}
+
+
+%{
+  Ex 7
+A = input('Digite um número:');
+if (0<A)
+  fprintf('a raiz quadrada de %d é: %d \n',A,sqrt(A))
+else
+  displ('A raiz quadrada é imaginária')
+endif
+%}
+
+
+
+%{
+#Ex 12
+base = 5
+altura = 2
+area_T = @(b,h) 9b*h)/2
+
+area = area_T(base,altura)
+%}
+
+%{
+l1 = 10
+l2 = 5
+ar_pr = @(l1,l2) [2*(l1+l2), l2*l1]
+calculo = ar_pr(l1,l2)
+fprintf('O perimetro do retangulo é:%d\na area do retangulo é:%d\n',calculo(1),calculo(2))
+%}
+
+%{
+Ex 18
+n = input('Digite um número(ele será o n-ésimo termo da sequencia de fibonacci):');
+v = [1 1];
+for j = 3:n
+   v = [v,v(j-1)+v(j-2) ];
+endfor
+disp(v)
+
+Ou ainda?
+
+
+#Ex 18
+n = input('Digite um número(ele será o n-ésimo termo da sequencia de fibonacci):');
+v = [];
+v(1) = 1;
+v(2) = 1;
+for j = 3:n
+   v = [v,v(j-1)+v(j-2)];
+endfor
+disp(v)
+%}
+%{
+#Ex   30
+
+n = input('')
+h = 0;
+for i = 1:n
+ h
+ h += 1/i
+endfor
+disp(h)
+%}
+%{
+#Ex 32
+soma = 0
+for n = 1:20
+  n
+  soma +=  n^n
+endfor
+%}
+%{
+a = input()
+b = input()
+c = input()
+delta = (b^2)*(4*a*c)
+raiz1 = -b+sqrt(delta)/2a
+raiz2 = -b-sqrt(delta)/2a
+%}
+%{
+n = input('')
+n_final = input('')
+v = [n:n_final]
+f_v = zeros(size(v))
+
+for i = 1:length(v)
+  if mod(v(i),2) == 1
+    f_v(i) = 1
+   else
+    f_v(i) = 2/(v(i)+2)
+  endif
+endfor
+
+plot(v,f_v,'-ob')
+xlabel('n')
+ylabel('f(n)')
+title('Grafico de f(n)')
+grid on
+%}
+%{
+clc
+clear all
+close all
+x = 1:10;
+for i = 1:length(x)
+  fn(i) = seq(x(i));
+endfor
+
+plot(x,fn, '*k')
+%}
+v = [];
+n = 2;
+count = 1;
+while count <= 100
+  if isprime(n) == 1
+    v(count) = n;
+    count += 1;
+  endif
+  n += 1;
+endwhile
+length(v)
 
 
 
