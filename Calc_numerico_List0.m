@@ -620,6 +620,14 @@ while count <= 100
 endwhile
 length(v)
 
-
-
-
+## Ex 37
+to = [0:3]
+x= [-2:0.01:5]
+figure(1)
+hold on
+for i = 1:length(to)
+  t_values = to(i)
+  u = exp(-(x - t_values).^2)
+  plot(x,u,'*')
+endfor
+## Aproximaçao e
