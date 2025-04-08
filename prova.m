@@ -189,3 +189,12 @@ for i = 100:999
   endif
 endfor
  disp(list_circular_primes
+
+# 1+1/(2+1/(2+1/(2+1/(...))))
+function r = frac_continua(n)
+  r = 2;
+  for i = 1:n-1
+    r = 2 + 1 / r;
+  end
+  r = 1 + 1 / r;
+end
